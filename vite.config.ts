@@ -19,4 +19,6 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+  // Fix base configuration for GitHub Pages
+  base: mode === 'production' ? '/mini-life-missions/' : '/',
+}))
